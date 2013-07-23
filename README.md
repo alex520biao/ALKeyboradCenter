@@ -66,12 +66,13 @@ __block关字可以让变量不被retain并且允许在在Block内容中修改�
 
 4.dealloc中解除键盘监听
 
+{
 -(void)dealloc{
     [[KeyboradNotificationCenter defaultCenter] removeKeyBoradObserver:self];
     
     [super dealloc];
 }
-
+}
 
 
 
