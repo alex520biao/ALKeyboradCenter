@@ -3,8 +3,11 @@ KeyboradNotificationCenterDemo
 
 KeyboradNotificationCenter是对NSNotificationCenter进行包装，专注于处理键盘事件UIKeyboardWillShowNotification、UIKeyboardWillHideNotification、UIKeyboardWillChangeFrameNotification
 封装内容:
+
 *添加键盘监听: 封装了上面的三个键盘事件，特别针对不同iOS版本进行特别处理;
+
 *键盘事件处理: 使用KeyboardWillShowBlcok和keyboardWillHideBlock两个Block来实现键盘事件回调，使用更加方便、代码更加集中;
+
 *键盘事件参数: 使用NSKeyboradNotification类封装了键盘的消息userInfo信息,查看更加直观、使用更加方便;
 
 
@@ -18,7 +21,7 @@ KeyboradNotificationCenter是对NSNotificationCenter进行包装，专注于处�
 __block ViewController *selfBlock=self;
 __block关字可以让变量不被retain并且允许在在Block内容中修改变量的值;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -62,6 +65,7 @@ __block关字可以让变量不被retain并且允许在在Block内容中修改�
 }
 
 4.dealloc中解除键盘监听
+
 -(void)dealloc{
     [[KeyboradNotificationCenter defaultCenter] removeKeyBoradObserver:self];
     
