@@ -21,6 +21,7 @@
 		E135C198179E822A00A116AD /* KeyboradNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */; };
 		E135C19C179E885500A116AD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C19A179E885500A116AD /* RootViewController.m */; };
 		E135C19D179E885500A116AD /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E135C19B179E885500A116AD /* RootViewController.xib */; };
+		E135C19F179E9D9300A116AD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E135C19E179E9D9300A116AD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		E135C199179E885400A116AD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		E135C19A179E885500A116AD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E135C19B179E885500A116AD /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		E135C19E179E9D9300A116AD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		E135C195179E822A00A116AD /* KeyboradNotificationCenter */ = {
 			isa = PBXGroup;
 			children = (
+				E135C19E179E9D9300A116AD /* README.md */,
 				E135C196179E822A00A116AD /* KeyboradNotificationCenter.h */,
 				E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */,
 			);
@@ -185,6 +188,7 @@
 				E135C189179E819700A116AD /* Default-568h@2x.png in Resources */,
 				E135C18F179E819700A116AD /* ViewController.xib in Resources */,
 				E135C19D179E885500A116AD /* RootViewController.xib in Resources */,
+				E135C19F179E9D9300A116AD /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +324,7 @@
 				E135C194179E819700A116AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
