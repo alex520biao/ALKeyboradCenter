@@ -13,15 +13,19 @@ KeyboradNotificationCenter是对NSNotificationCenter进行包装，专注于处�
 
 
 使用步骤:
+
 1.拖动KeyboradNotificationCenter目录添加到工程中;
 
 2.在工程XXXX-Prefix.pch文件中添加import；
 
- #import "KeyboradNotificationCenter.h"
+#import "KeyboradNotificationCenter.h"
     
 3.在init方法中addObserver
+
 因为KeyboardWillShowBlcok和keyboardWillHideBlock的内容都是会被copy的，所以Blocks内容中不能出现self或者是当前类的成员变量，否则会引起循环引用;
+
 __block ViewController *selfBlock=self;
+
 __block关字可以让变量不被retain并且允许在在Block内容中修改变量的值;
 
 -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
