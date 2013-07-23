@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E135C173179E819700A116AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E135C172179E819700A116AD /* UIKit.framework */; };
+		E135C175179E819700A116AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E135C174179E819700A116AD /* Foundation.framework */; };
+		E135C177179E819700A116AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E135C176179E819700A116AD /* CoreGraphics.framework */; };
+		E135C17D179E819700A116AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E135C17B179E819700A116AD /* InfoPlist.strings */; };
+		E135C17F179E819700A116AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C17E179E819700A116AD /* main.m */; };
+		E135C183179E819700A116AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C182179E819700A116AD /* AppDelegate.m */; };
+		E135C185179E819700A116AD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E135C184179E819700A116AD /* Default.png */; };
+		E135C187179E819700A116AD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E135C186179E819700A116AD /* Default@2x.png */; };
+		E135C189179E819700A116AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E135C188179E819700A116AD /* Default-568h@2x.png */; };
+		E135C18C179E819700A116AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C18B179E819700A116AD /* ViewController.m */; };
+		E135C18F179E819700A116AD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E135C18D179E819700A116AD /* ViewController.xib */; };
+		E135C198179E822A00A116AD /* KeyboradNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */; };
+		E135C19C179E885500A116AD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C19A179E885500A116AD /* RootViewController.m */; };
+		E135C19D179E885500A116AD /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E135C19B179E885500A116AD /* RootViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E135C16F179E819700A116AD /* KeyboradNotificationCenterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboradNotificationCenterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E135C172179E819700A116AD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E135C174179E819700A116AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E135C176179E819700A116AD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E135C17A179E819700A116AD /* KeyboradNotificationCenterDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KeyboradNotificationCenterDemo-Info.plist"; sourceTree = "<group>"; };
+		E135C17C179E819700A116AD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E135C17E179E819700A116AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E135C180179E819700A116AD /* KeyboradNotificationCenterDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KeyboradNotificationCenterDemo-Prefix.pch"; sourceTree = "<group>"; };
+		E135C181179E819700A116AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E135C182179E819700A116AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E135C184179E819700A116AD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E135C186179E819700A116AD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E135C188179E819700A116AD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E135C18A179E819700A116AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E135C18B179E819700A116AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E135C18E179E819700A116AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		E135C196179E822A00A116AD /* KeyboradNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboradNotificationCenter.h; sourceTree = "<group>"; };
+		E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboradNotificationCenter.m; sourceTree = "<group>"; };
+		E135C199179E885400A116AD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		E135C19A179E885500A116AD /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		E135C19B179E885500A116AD /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E135C16C179E819700A116AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E135C173179E819700A116AD /* UIKit.framework in Frameworks */,
+				E135C175179E819700A116AD /* Foundation.framework in Frameworks */,
+				E135C177179E819700A116AD /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E135C166179E819700A116AD = {
+			isa = PBXGroup;
+			children = (
+				E135C178179E819700A116AD /* KeyboradNotificationCenterDemo */,
+				E135C171179E819700A116AD /* Frameworks */,
+				E135C170179E819700A116AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E135C170179E819700A116AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E135C16F179E819700A116AD /* KeyboradNotificationCenterDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E135C171179E819700A116AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E135C172179E819700A116AD /* UIKit.framework */,
+				E135C174179E819700A116AD /* Foundation.framework */,
+				E135C176179E819700A116AD /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E135C178179E819700A116AD /* KeyboradNotificationCenterDemo */ = {
+			isa = PBXGroup;
+			children = (
+				E135C195179E822A00A116AD /* KeyboradNotificationCenter */,
+				E135C181179E819700A116AD /* AppDelegate.h */,
+				E135C182179E819700A116AD /* AppDelegate.m */,
+				E135C199179E885400A116AD /* RootViewController.h */,
+				E135C19A179E885500A116AD /* RootViewController.m */,
+				E135C19B179E885500A116AD /* RootViewController.xib */,
+				E135C18A179E819700A116AD /* ViewController.h */,
+				E135C18B179E819700A116AD /* ViewController.m */,
+				E135C18D179E819700A116AD /* ViewController.xib */,
+				E135C179179E819700A116AD /* Supporting Files */,
+			);
+			path = KeyboradNotificationCenterDemo;
+			sourceTree = "<group>";
+		};
+		E135C179179E819700A116AD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E135C17A179E819700A116AD /* KeyboradNotificationCenterDemo-Info.plist */,
+				E135C17B179E819700A116AD /* InfoPlist.strings */,
+				E135C17E179E819700A116AD /* main.m */,
+				E135C180179E819700A116AD /* KeyboradNotificationCenterDemo-Prefix.pch */,
+				E135C184179E819700A116AD /* Default.png */,
+				E135C186179E819700A116AD /* Default@2x.png */,
+				E135C188179E819700A116AD /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E135C195179E822A00A116AD /* KeyboradNotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				E135C196179E822A00A116AD /* KeyboradNotificationCenter.h */,
+				E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */,
+			);
+			path = KeyboradNotificationCenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E135C16E179E819700A116AD /* KeyboradNotificationCenterDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E135C192179E819700A116AD /* Build configuration list for PBXNativeTarget "KeyboradNotificationCenterDemo" */;
+			buildPhases = (
+				E135C16B179E819700A116AD /* Sources */,
+				E135C16C179E819700A116AD /* Frameworks */,
+				E135C16D179E819700A116AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyboradNotificationCenterDemo;
+			productName = KeyboradNotificationCenterDemo;
+			productReference = E135C16F179E819700A116AD /* KeyboradNotificationCenterDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E135C167179E819700A116AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = alex;
+			};
+			buildConfigurationList = E135C16A179E819700A116AD /* Build configuration list for PBXProject "KeyboradNotificationCenterDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E135C166179E819700A116AD;
+			productRefGroup = E135C170179E819700A116AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E135C16E179E819700A116AD /* KeyboradNotificationCenterDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E135C16D179E819700A116AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E135C17D179E819700A116AD /* InfoPlist.strings in Resources */,
+				E135C185179E819700A116AD /* Default.png in Resources */,
+				E135C187179E819700A116AD /* Default@2x.png in Resources */,
+				E135C189179E819700A116AD /* Default-568h@2x.png in Resources */,
+				E135C18F179E819700A116AD /* ViewController.xib in Resources */,
+				E135C19D179E885500A116AD /* RootViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E135C16B179E819700A116AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E135C17F179E819700A116AD /* main.m in Sources */,
+				E135C183179E819700A116AD /* AppDelegate.m in Sources */,
+				E135C18C179E819700A116AD /* ViewController.m in Sources */,
+				E135C198179E822A00A116AD /* KeyboradNotificationCenter.m in Sources */,
+				E135C19C179E885500A116AD /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E135C17B179E819700A116AD /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E135C17C179E819700A116AD /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E135C18D179E819700A116AD /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E135C18E179E819700A116AD /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E135C190179E819700A116AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E135C191179E819700A116AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E135C193179E819700A116AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KeyboradNotificationCenterDemo/KeyboradNotificationCenterDemo-Prefix.pch";
+				INFOPLIST_FILE = "KeyboradNotificationCenterDemo/KeyboradNotificationCenterDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E135C194179E819700A116AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KeyboradNotificationCenterDemo/KeyboradNotificationCenterDemo-Prefix.pch";
+				INFOPLIST_FILE = "KeyboradNotificationCenterDemo/KeyboradNotificationCenterDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E135C16A179E819700A116AD /* Build configuration list for PBXProject "KeyboradNotificationCenterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E135C190179E819700A116AD /* Debug */,
+				E135C191179E819700A116AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E135C192179E819700A116AD /* Build configuration list for PBXNativeTarget "KeyboradNotificationCenterDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E135C193179E819700A116AD /* Debug */,
+				E135C194179E819700A116AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E135C167179E819700A116AD /* Project object */;
+}
