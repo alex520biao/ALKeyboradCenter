@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (nonatomic, assign) IBOutlet UITextField *textField;
-@property (nonatomic, assign) IBOutlet UIButton *closeBtn;
+@property (nonatomic, retain) UITextField *textField;
+@property (nonatomic, retain) UIButton *closeBtn;
 
 -(IBAction)closeAction:(id)sender;
 @end

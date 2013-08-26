@@ -61,13 +61,36 @@
 -(void)dealloc{
     [[KeyboradNotificationCenter defaultCenter] removeKeyBoradObserver:self];
     
+    [_textField release];
+    _textField=nil;
+    
     [super dealloc];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor=[UIColor whiteColor];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"viewDidLoad");
+    UITextField *textField=[[UITextField alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height-30-44,self.view.frame.size.width, 30)];
+    textField.borderStyle=UITextBorderStyleRoundedRect;//边框类型
+    textField.font=[UIFont systemFontOfSize:12.0f];
+    textField.text=@"";
+    textField.placeholder=@"请输入";//提示语
+    textField.contentVerticalAlignment=UIControlContentVerticalAlignmentCenter;//垂直居中
+    self.textField=textField;
+    [self.view addSubview:textField];
+    [textField release];
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    self.textField.text=nil;
+    if ([self.textField isFirstResponder]) {
+        [self.textField resignFirstResponder];
+    }
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning

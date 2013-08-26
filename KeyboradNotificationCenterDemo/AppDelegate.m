@@ -26,8 +26,9 @@
     RootViewController *rootViewController = [[[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil] autorelease];
     UINavigationController *navigationController=[[UINavigationController alloc] initWithRootViewController:rootViewController];
     self.navigationController=navigationController;
-    self.window.rootViewController = self.navigationController;
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
+    [navigationController release];
     return YES;
 }
 

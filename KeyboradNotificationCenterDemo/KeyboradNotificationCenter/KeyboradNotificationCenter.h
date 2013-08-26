@@ -10,8 +10,8 @@
 
 //键盘监听返回的userInfo数据对象
 @interface NSKeyboradNotification : NSObject
-@property (nonatomic, assign) CGRect keyboardFrameBegin;
-@property (nonatomic, assign) CGRect keyboardFrameEnd;
+@property (nonatomic, assign) CGRect keyboardFrameBegin;//键盘弹出前在keyWindow上的frame
+@property (nonatomic, assign) CGRect keyboardFrameEnd;//键盘弹出后前在keyWindow上的frame
 @property (nonatomic, assign) NSTimeInterval keyboardAnimationDuration;
 @property (nonatomic, assign) UIViewAnimationCurve keyboradAnimationCurve;
 

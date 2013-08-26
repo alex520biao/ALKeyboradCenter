@@ -17,7 +17,6 @@
 		E135C187179E819700A116AD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E135C186179E819700A116AD /* Default@2x.png */; };
 		E135C189179E819700A116AD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E135C188179E819700A116AD /* Default-568h@2x.png */; };
 		E135C18C179E819700A116AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C18B179E819700A116AD /* ViewController.m */; };
-		E135C18F179E819700A116AD /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E135C18D179E819700A116AD /* ViewController.xib */; };
 		E135C198179E822A00A116AD /* KeyboradNotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */; };
 		E135C19C179E885500A116AD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E135C19A179E885500A116AD /* RootViewController.m */; };
 		E135C19D179E885500A116AD /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E135C19B179E885500A116AD /* RootViewController.xib */; };
@@ -40,7 +39,6 @@
 		E135C188179E819700A116AD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		E135C18A179E819700A116AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E135C18B179E819700A116AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E135C18E179E819700A116AD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		E135C196179E822A00A116AD /* KeyboradNotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboradNotificationCenter.h; sourceTree = "<group>"; };
 		E135C197179E822A00A116AD /* KeyboradNotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboradNotificationCenter.m; sourceTree = "<group>"; };
 		E135C199179E885400A116AD /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
@@ -101,7 +99,6 @@
 				E135C19B179E885500A116AD /* RootViewController.xib */,
 				E135C18A179E819700A116AD /* ViewController.h */,
 				E135C18B179E819700A116AD /* ViewController.m */,
-				E135C18D179E819700A116AD /* ViewController.xib */,
 				E135C179179E819700A116AD /* Supporting Files */,
 			);
 			path = KeyboradNotificationCenterDemo;
@@ -186,7 +183,6 @@
 				E135C185179E819700A116AD /* Default.png in Resources */,
 				E135C187179E819700A116AD /* Default@2x.png in Resources */,
 				E135C189179E819700A116AD /* Default-568h@2x.png in Resources */,
-				E135C18F179E819700A116AD /* ViewController.xib in Resources */,
 				E135C19D179E885500A116AD /* RootViewController.xib in Resources */,
 				E135C19F179E9D9300A116AD /* README.md in Resources */,
 			);
@@ -216,14 +212,6 @@
 				E135C17C179E819700A116AD /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E135C18D179E819700A116AD /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E135C18E179E819700A116AD /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

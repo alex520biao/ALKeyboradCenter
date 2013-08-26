@@ -47,7 +47,7 @@
 
 #pragma mark custom
 -(IBAction)nextAction:(id)sender{
-    ViewController *viewController=[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    ViewController *viewController=[[ViewController alloc] init];
     [self.navigationController pushViewController:viewController animated:YES];
     [viewController release];
 }

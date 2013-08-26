@@ -2,14 +2,22 @@ KeyboradNotificationCenterDemo
 ==============================
 
 KeyboradNotificationCenter封装NSNotificationCenter监听键盘事件
-
 KeyboradNotificationCenter是对NSNotificationCenter进行包装，专注于处理键盘事件UIKeyboardWillShowNotification、UIKeyboardWillHideNotification、UIKeyboardWillChangeFrameNotification
-一.封装内容:
-*添加键盘监听: 封装了上面的三个键盘事件，特别针对不同iOS版本进行特别处理;
-*键盘事件处理: 使用KeyboardWillShowBlcok和keyboardWillHideBlock两个Block来实现键盘事件回调，使用更加方便、代码更加集中;
-*键盘事件参数: 使用NSKeyboradNotification类封装了键盘的消息userInfo信息,查看更加直观、使用更加方便;
 
-二.使用步骤:
+一.封装内容:
+*键盘事件消息封装: 封装了NSNotificationCenter有关键盘事件的三个消息，并针对不同iOS版本进行兼容处理;
+*键盘事件回调封装: 使用KeyboardWillShowBlcok和keyboardWillHideBlock两个Block来实现键盘事件回调，使用更加方便、代码更加集中;
+*键盘事件参数封装: 使用NSKeyboradNotification类封装了键盘的消息userInfo信息,并通过block返回,这样查看键盘事件参数更加直观、使用更加方便;
+
+二.方法说明
+-(void)addObserver:(id)observer willShow:(KeyboardWillShowBlcok)willShowBlcok willHide:(keyboardWillHideBlock)willHideBlock;
+此方法中observer不会被retain，willShowBlock和willHideBlock会被copy;
+
+[[KeyboradNotificationCenter defaultCenter] removeKeyBoradObserver:self];
+必须在dealloc中解除键盘事件监听，否则当前congtroller将得不到释放。
+willShowBlock和willHideBlock中不应该直接使用self或者成员变量，否则将产生循环引用问题。
+
+三.使用步骤:
 1.拖动KeyboradNotificationCenter目录添加到工程中;
 
 2.在工程XXXX-Prefix.pch文件中添加import；

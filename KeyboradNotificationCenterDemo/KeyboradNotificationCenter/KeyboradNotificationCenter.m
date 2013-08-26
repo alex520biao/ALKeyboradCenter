@@ -116,7 +116,9 @@ static KeyboradNotificationCenter *keyboradCenter = nil;
         }
     }
     if (currentBlock) {
+        NSLog(@"%d",self.keyboradBlcksSet.count);
         [self.keyboradBlcksSet removeObject:currentBlock];
+        NSLog(@"%d",self.keyboradBlcksSet.count);
     }
 }
 
