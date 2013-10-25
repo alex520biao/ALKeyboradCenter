@@ -1,8 +1,7 @@
 KeyboradNotificationCenterDemo
 ==============================
 
-KeyboradNotificationCenter封装NSNotificationCenter监听键盘事件  
-KeyboradNotificationCenter是对NSNotificationCenter进行包装，专注于处理键盘事件UIKeyboardWillShowNotification、UIKeyboardWillHideNotification、UIKeyboardWillChangeFrameNotification  
+KeyboradNotificationCenter封装NSNotificationCenter监听键盘事件,对NSNotificationCenter进行包装，专注于处理键盘事件UIKeyboardWillShowNotification、UIKeyboardWillHideNotification、UIKeyboardWillChangeFrameNotification  
 
 ####一.封装内容
 1. 键盘事件消息封装: 封装了NSNotificationCenter有关键盘事件的三个消息，并针对不同iOS版本进行兼容处理;
