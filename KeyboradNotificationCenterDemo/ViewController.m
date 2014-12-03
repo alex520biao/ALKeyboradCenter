@@ -74,7 +74,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSLog(@"viewDidLoad");
-    UITextField *textField=[[UITextField alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height-30-44,self.view.frame.size.width, 30)];
+    UITextField *textField=[[UITextField alloc] initWithFrame:CGRectMake(0,self.view.frame.size.height-30,self.view.frame.size.width, 30)];
     textField.borderStyle=UITextBorderStyleRoundedRect;//边框类型
     textField.font=[UIFont systemFontOfSize:12.0f];
     textField.text=@"";
@@ -83,6 +83,14 @@
     self.textField=textField;
     [self.view addSubview:textField];
     [textField release];
+    
+    //结束编辑
+    UIButton *endBtn=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [endBtn setTitle:@"结束" forState:UIControlStateNormal];
+    endBtn.titleLabel.textColor=[UIColor redColor];
+    endBtn.frame=CGRectMake(100,100,80,40);
+    [endBtn addTarget:self action:@selector(closeAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:endBtn];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
