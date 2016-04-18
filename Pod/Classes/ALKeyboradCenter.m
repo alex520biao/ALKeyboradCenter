@@ -9,10 +9,6 @@
 #import "ALKeyboradCenter.h"
 
 @implementation ALKeyboradNotification
-@synthesize keyboardFrameBegin=_keyboardFrameBegin;
-@synthesize keyboardFrameEnd=_keyboardFrameEnd;
-@synthesize keyboardAnimationDuration=_keyboardAnimationDuration;
-@synthesize keyboradAnimationCurve=_keyboradAnimationCurve;
 
 /*!
  *  @brief 封装键盘事件的NSNotification
@@ -44,13 +40,13 @@
     return self;
 }
 
+-(UIView*)fromView{
+    return [UIApplication sharedApplication].keyWindow;
+}
+
 @end
 
 @implementation ALKeyboradBlocks
-
-@synthesize observer=_observer;
-@synthesize keyboardWillShowBlcok=_keyboardWillShowBlcok;
-@synthesize keyboardWillHideBlock=_keyboardWillHideBlock;
 
 -(void)dealloc{
     _observer=nil;
@@ -123,11 +119,11 @@
 }
 
 #pragma mark - ManagerObserver
--(void)addObserver:(id)observer willShow:(KeyboardWillShowBlcok)willShowBlcok willHide:(keyboardWillHideBlock)willHideBlock{
-    ALKeyboradBlocks *blocks=[[ALKeyboradBlocks alloc] init];
-    blocks.observer=observer;
-    blocks.keyboardWillShowBlcok=willShowBlcok;
-    blocks.keyboardWillHideBlock=willHideBlock;
+-(void)addObserver:(id)observer willShow:(ALKeyboardWillShowBlcok)willShowBlcok willHide:(ALKeyboardWillHideBlock)willHideBlock{
+    ALKeyboradBlocks *blocks =[[ALKeyboradBlocks alloc] init];
+    blocks.observer = observer;
+    blocks.keyboardWillShowBlcok = willShowBlcok;
+    blocks.keyboardWillHideBlock = willHideBlock;
     [self.keyboradBlcksSet addObject:blocks];
 }
 

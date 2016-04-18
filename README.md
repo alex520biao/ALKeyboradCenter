@@ -11,61 +11,63 @@ ALKeyboradCenter封装NSNotificationCenter监听键盘事件,对NSNotificationCe
 
 ####二.方法说明  
 
-    -(void)addObserver:(id)observer 
-              willShow:(KeyboardWillShowBlcok)willShowBlcok 
-              willHide:(keyboardWillHideBlock)willHideBlock;
+	/*!
+	 *  @brief 添加键盘事件监听者
+	 *
+	 *  @param observer      observer为weak弱引用
+	 *  @param willShowBlcok KeyboardWillShowBlcok会被copy
+	 *  @param willHideBlock keyboardWillHideBlock会被copy
+	 */
+	-(void)addObserver:(id)observer
+	          willShow:(ALKeyboardWillShowBlcok)willShowBlcok
+	          willHide:(ALKeyboardWillHideBlock)willHideBlock;
+
 此方法中observer不会被retain，willShowBlock和willHideBlock会被copy;  
 
-[[KeyboradNotificationCenter defaultCenter] removeKeyBoradObserver:self];
+[[ALKeyboradCenter defaultCenter] removeKeyBoradObserver:self];
 必须在dealloc中解除键盘事件监听，否则当前congtroller将得不到释放。willShowBlock和willHideBlock中不应该直接使用self或者成员变量，否则将产生循环引用问题。
 
 ####三.使用步骤:
-1. 拖动KeyboradNotificationCenter目录添加到工程中;   
+1. podfile中添加ALKeyboradCenter;   
 2. 在工程XXXX-Prefix.pch文件中添加import； 
 
-    	#import "KeyboradNotificationCenter.h"
+        #import <ALKeyboradCenter/ALKeyboradCenter.h>
     
 3. 在init方法中addObserver  
 因为KeyboardWillShowBlcok和keyboardWillHideBlock的内容都是会被copy的，所以Blocks内容中不能出现self或者是当前类的成员变量，否则会引起循环引用;  
 
-	    -(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
-	        self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-	        if (self) {
-	            //__block用于修饰self，保证不会循环引用
-	            __block ViewController *selfBlock=self;
-	            [[KeyboradNotificationCenter defaultCenter] addObserver:self
-	                                                           willShow:^(NSKeyboradNotification *keyboradObj) {
-	                                                               CGRect keyboardFrameEnd_View = [selfBlock.view convertRect:keyboradObj.keyboardFrameEnd fromView:nil];
-	                                                               
-	                                                               NSLog(@"NSKeyboradNotification");
-	                                                               
-	                                                               /* Move the toolbar to above the keyboard */
-	                                                               [UIView beginAnimations:nil context:NULL];
-	                                                               [UIView setAnimationDuration:keyboradObj.keyboardAnimationDuration];
-	                                                               [UIView setAnimationCurve:keyboradObj.keyboradAnimationCurve];
-	                                                               [UIView setAnimationBeginsFromCurrentState:YES];
-	                                                               CGRect frame = selfBlock.textField.frame;
-	                                                               frame.origin.y= keyboardFrameEnd_View.origin.y-selfBlock.textField.frame.size.height;//键盘高度
-	                                                               selfBlock.textField.frame = frame;
-	                                                               [UIView commitAnimations];
-	                                                           }
-	                                                           willHide:^(NSKeyboradNotification *keyboradObj) {
-	                                                                CGRect keyboardFrameEnd_View = [selfBlock.view convertRect:keyboradObj.keyboardFrameEnd fromView:nil];
-	                                                               
-	                                                               /* Move the toolbar to above the keyboard */
-	                                                               [UIView beginAnimations:nil context:NULL];
-	                                                               [UIView setAnimationDuration:keyboradObj.keyboardAnimationDuration];
-	                                                               [UIView setAnimationCurve:keyboradObj.keyboradAnimationCurve];
-	                                                               [UIView setAnimationBeginsFromCurrentState:YES];
-	                                                               CGRect frame = selfBlock.textField.frame;
-	                                                               frame.origin.y= keyboardFrameEnd_View.origin.y-selfBlock.textField.frame.size.height;//键盘高度
-	                                                               selfBlock.textField.frame = frame;
-	                                                               [UIView commitAnimations];
-	                                                           }
-	             ];
-	        }
-	        return self;
-	    }  
+		- (void)viewDidLoad
+		{
+		    [super viewDidLoad];
+		    self.view.backgroundColor=[UIColor whiteColor];
+		    // Do any additional setup after loading the view, typically from a nib.
+		    
+		    //controller监听键盘事件
+		    __weak typeof(self) weakSelf = self;
+		    [[ALKeyboradCenter defaultCenter] addObserver:self
+		                                         willShow:^(ALKeyboradNotification *keyboradObj) {
+		                                             //处理keyboradObj
+		                                             //将UIWindow坐标系的keyboardFrameEnd转换为self.view坐标系的keyboardFrameEnd_View
+												    CGRect keyboardFrameEnd_View = [weakSelf.view convertRect:keyboradObj.keyboardFrameEnd fromView:keyboradObj.fromView];
+												    
+												    /* Move the toolbar to above the keyboard */
+												    [UIView beginAnimations:nil context:NULL];
+												    [UIView setAnimationDuration:keyboradObj.keyboardAnimationDuration];
+												    [UIView setAnimationCurve:keyboradObj.keyboradAnimationCurve];
+												    [UIView setAnimationBeginsFromCurrentState:YES];
+												    
+												    CGRect frame = self.textField.frame;
+												    frame.origin.y= keyboardFrameEnd_View.origin.y - self.textField.frame.size.height;//键盘高度
+												    self.textField.frame = frame;
+												    
+												    [UIView commitAnimations];
+
+		                                         }
+		                                         willHide:^(ALKeyboradNotification *keyboradObj) {
+													//同上
+		                                         }
+		     ];
+		} 
 
 4. dealloc中解除键盘监听  
         

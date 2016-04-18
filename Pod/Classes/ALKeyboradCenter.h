@@ -28,7 +28,14 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) ALKeyboradNotificationType keyboradNotificationType;
 
 /*!
+ *  @brief 键盘frame的fromView即为UIApplication的keyWindow
+ */
+@property (nonatomic, weak,readonly) UIView* fromView;
+
+/*!
  *  @brief  键盘事件前键盘在keywindow上的frame
+ *  @note   CGRect keyboardFrameEnd_View = [self.view convertRect:keyboradObj.keyboardFrameEnd fromView:keyboradObj.fromView];
+
  */
 @property (nonatomic, assign) CGRect keyboardFrameBegin;
 
@@ -52,6 +59,7 @@ typedef enum : NSUInteger {
  */
 @property (nonatomic, strong) NSNotification* notification;
 
+
 /*!
  *  @brief 封装键盘事件的NSNotification
  *
@@ -64,8 +72,8 @@ typedef enum : NSUInteger {
 @end
 
 //定义Blocks类型
-typedef void (^KeyboardWillShowBlcok)(ALKeyboradNotification *keyboradObj);
-typedef void (^keyboardWillHideBlock)(ALKeyboradNotification *keyboradObj);
+typedef void (^ALKeyboardWillShowBlcok)(ALKeyboradNotification *keyboradObj);
+typedef void (^ALKeyboardWillHideBlock)(ALKeyboradNotification *keyboradObj);
 
 /*!
  *  @brief 键盘事件监听者对象
@@ -78,11 +86,11 @@ typedef void (^keyboardWillHideBlock)(ALKeyboradNotification *keyboradObj);
 /*!
  *  @brief 键盘展示事件block
  */
-@property (nonatomic, copy) KeyboardWillShowBlcok keyboardWillShowBlcok;
+@property (nonatomic, copy) ALKeyboardWillShowBlcok keyboardWillShowBlcok;
 /*!
  *  @brief 键盘隐藏事件block
  */
-@property (nonatomic, copy) keyboardWillHideBlock keyboardWillHideBlock;
+@property (nonatomic, copy) ALKeyboardWillHideBlock keyboardWillHideBlock;
 @end
 
 @interface ALKeyboradCenter : NSObject
@@ -96,8 +104,8 @@ typedef void (^keyboardWillHideBlock)(ALKeyboradNotification *keyboradObj);
  *  @param willHideBlock keyboardWillHideBlock会被copy
  */
 -(void)addObserver:(id)observer
-          willShow:(KeyboardWillShowBlcok)willShowBlcok
-          willHide:(keyboardWillHideBlock)willHideBlock;
+          willShow:(ALKeyboardWillShowBlcok)willShowBlcok
+          willHide:(ALKeyboardWillHideBlock)willHideBlock;
 
 /*!
  *  @brief 移除observer对象的键盘监听

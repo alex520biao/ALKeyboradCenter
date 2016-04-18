@@ -74,7 +74,7 @@
 
 -(void)updatView_KeyboradNotification:(ALKeyboradNotification *)keyboradObj{
     //将UIWindow坐标系的keyboardFrameEnd转换为self.view坐标系的keyboardFrameEnd_View
-    CGRect keyboardFrameEnd_View = [self.view convertRect:keyboradObj.keyboardFrameEnd fromView:nil];
+    CGRect keyboardFrameEnd_View = [self.view convertRect:keyboradObj.keyboardFrameEnd fromView:keyboradObj.fromView];
     
     /* Move the toolbar to above the keyboard */
     [UIView beginAnimations:nil context:NULL];
