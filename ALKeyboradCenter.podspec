@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ALKeyboradCenter"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "ALKeyboradCenter is a tool of NSNotificationCenter about Keyborad."
   s.description      = <<-DESC.gsub(/^\s*\|?/,'')
                        ALKeyboradCenter封装NSNotificationCenter监听键盘事件。ALKeyboradCenter is a tool of NSNotificationCenter about Keyborad.
