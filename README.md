@@ -72,9 +72,8 @@ ALKeyboradCenter封装NSNotificationCenter监听键盘事件,对NSNotificationCe
 4. dealloc中解除键盘监听  
         
         -(void)dealloc{
-            [[KeyboradNotificationCenter defaultCenter] removeKeyBoradObserver:self];
+            [[ALKeyboradCenter defaultCenter] removeKeyBoradObserver:self];
             
-            [super dealloc];
         }
         
 

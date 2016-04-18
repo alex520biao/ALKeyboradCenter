@@ -10,12 +10,10 @@
 Pod::Spec.new do |s|
   s.name             = "ALKeyboradCenter"
   s.version          = "0.1.0"
-  s.summary          = "A short description of ALKeyboradCenter."
+  s.summary          = "ALKeyboradCenter is a tool of NSNotificationCenter about Keyborad."
   s.description      = <<-DESC.gsub(/^\s*\|?/,'')
-                       An optional longer description of ALKeyboradCenter
+                       ALKeyboradCenter封装NSNotificationCenter监听键盘事件。
 
-                       | * Markdown format.
-                       | * Don't worry about the indent, we strip it!
                        DESC
   s.homepage         = "https://github.com/alex520biao/ALKeyboradCenter"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
